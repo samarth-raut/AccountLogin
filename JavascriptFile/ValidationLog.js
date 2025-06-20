@@ -34,6 +34,6 @@
         }
     }
     function Next(){
-        window.location.href="Sign.html";
+        window.location.href="../HtmlFiles/Sign.html";
         return false;
     }
