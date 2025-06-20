@@ -18,7 +18,9 @@
                           <small> <i>Become a part of our vibrant community of over 100,000 subscribers and explore new ways to learn and grow every day.</i></small><br>
                          
                           <br><br><br>
-                            <input type="submit" value="SIGN IN" id="login">
+                          <form onsubmit="return Next()">
+                            <input type="submit" value="SING IN" id="login">
+                          </form>
                 </div>
                 <div id="child2">
                             <form id="form" onsubmit="return Validate()">
@@ -74,6 +76,10 @@
             alert("Invalid email or password");
             return false;
         }
+    }
+    function Next(){
+        window.location.href="Sign.html";
+        return false;
     }
 </script>
 
