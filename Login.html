@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Log.css">
+</head>
+<body>
+
+    <section> 
+            <div id="BorderDiv">
+                <div id="inParentDiv">
+                        <div id="child1">
+                            <a href="Login.html">LOGIN</a>
+                          
+                          <img src="assets/G4.jpg"><br><br>
+                          <small> <i>Become a part of our vibrant community of over 100,000 subscribers and explore new ways to learn and grow every day.</i></small><br>
+                         
+                          <br><br><br>
+                            <input type="submit" value="SIGN IN" id="login">
+                </div>
+                <div id="child2">
+                            <form id="form" onsubmit="return Validate()">
+                                <br><br>
+                                <h3> BE ONE OF US </h3>
+                                <br><br>
+                             <input type="name" id="email" placeholder="Email" required>
+                                <br><br>
+                                 <input type="password" id="key" placeholder="Password">
+                                 <br><br><br>
+                                  <input type="submit" value="LOGIN" id="login">
+                                  <br><br><br>
+                                <div id="Bottomfoot">
+                                   <small> Don't have a account ?</small>
+                                   <a href="Sign.html"> Sign In</a>
+                                </div>
+                            </form>
+                    </div>
+             </div>
+    </section>
+    <script>
+    function Validate() {
+        let mail = document.getElementById("email").value.trim();
+        let Key = document.getElementById("key").value.trim();
+
+        const reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!(mail.endsWith("@gmail.com") || mail.endsWith("@yahoo.com") || mail.endsWith("@outlook.com"))) {
+            alert("Invalid mail! Please enter a correct email address");
+            return false;
+        }
+
+        if (!reg.test(mail)) {
+            alert("Invalid email format");
+            return false;
+        }
+
+        if (!(Key.length > 5)) {
+            alert("Password must be at least 6 characters");
+            return false;
+        }
+
+        // Get stored values from localStorage
+        const userName = localStorage.getItem("userName")?.trim(); // key must match what you saved
+        const LogUser = localStorage.getItem("Email")?.trim();
+        const logKey = localStorage.getItem("Password")?.trim();
+
+        if (mail === LogUser && Key === logKey) {
+            alert(`Successfully Logged in, ${userName}`);
+            window.location.href ="loggedFile.html";
+            return false;
+        } else {
+            alert("Invalid email or password");
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
