@@ -1,0 +1,28 @@
+{
+  "name": "logindesign",
+  "version": "1.0.0",
+  "description": "A basic login and signup form built using HTML, CSS, and JavaScript with local storage support.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samarth-raut/LoginDesign.git"
+  },
+  "keywords": [
+    "login",
+    "signup",
+    "html",
+    "css",
+    "javascript",
+    "localstorage",
+    "frontend"
+  ],
+  "author": "Samarth Raut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samarth-raut/LoginDesign/issues"
+  },
+  "homepage": "https://github.com/samarth-raut/LoginDesign#readme"
+}

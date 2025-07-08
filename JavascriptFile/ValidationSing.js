@@ -10,7 +10,6 @@ function Validate() {
             alert("Name should be at least 6 characters");
             return false;
         }
-
         if (!regName.test(name)) {
             alert("Only characters A-Z, a-z and spaces allowed in name");
             return false;
@@ -20,7 +19,6 @@ function Validate() {
             alert("Invalid mail! Please enter a valid email address");
             return false;
         }
-
         if (!reg.test(mail)) {
             alert("Invalid mail format");
             return false;
@@ -30,8 +28,25 @@ function Validate() {
             alert("Password must be at least 6 characters");
             return false;
         }
+          if (!name || !mail || !Key) {
+        alert("All fields are required!");
+        return false;
+    }
 
-        // Save to localStorage
+
+    let existingEmail = localStorage.getItem("Email");
+
+    if (existingEmail === mail) {
+        alert("This email already exists!");
+        return false;
+    }
+
+  
+        localStorage.setItem("userName", name);
+        localStorage.setItem("Email", mail);
+        localStorage.setItem("Password", Key);
+
+
         localStorage.setItem("userName", name);
         localStorage.setItem("Email", mail);
         localStorage.setItem("Password", Key);

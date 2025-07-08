@@ -19,8 +19,7 @@
             return false;
         }
 
-        // Get stored values from localStorage
-        const userName = localStorage.getItem("userName")?.trim(); // key must match what you saved
+        const userName = localStorage.getItem("userName")?.trim(); 
         const LogUser = localStorage.getItem("Email")?.trim();
         const logKey = localStorage.getItem("Password")?.trim();
 
