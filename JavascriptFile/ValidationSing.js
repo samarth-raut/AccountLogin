@@ -42,6 +42,6 @@ function Validate() {
         return true;
     }
       function Next(){
-        window.location.href="../HtmlFiles/Login.html";
+        window.location.href="../index.html";
         return false;
     }

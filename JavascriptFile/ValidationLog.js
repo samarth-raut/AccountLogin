@@ -26,7 +26,7 @@
 
         if (mail === LogUser && Key === logKey) {
             alert(`Successfully Logged in, ${userName}`);
-            window.location.href ="loggedFile.html";
+            window.location.href ="./HtmlFiles/loggedFile.html";
             return false;
         } else {
             alert("Invalid email or password");
@@ -34,6 +34,6 @@
         }
     }
     function Next(){
-        window.location.href="../HtmlFiles/Sign.html";
+        window.location.href="./HtmlFiles/Sign.html";
         return false;
     }
