@@ -1,39 +1,49 @@
-Login Page Project
+# Basic Login and Signup Form using HTML, CSS and JavaScript
 
-1. Skills Used
-This Login Page is built using HTML, CSS, and JavaScript.
-I focused on creating a responsive UI with a clean and user-friendly design.
-JavaScript is used for form validation and to handle user authentication logic.
+This project is a basic login and signup form system built using HTML, CSS, and JavaScript. It stores user data in the browser's local storage. The project allows users to sign up with an email and password, validates existing users during login, and prevents duplicate email registrations.
 
-2. Data Storage Method
-User information (name, email, and password) is securely handled using the browser's localStorage feature.
+---
 
-Here’s how it works:
-- On the Sign-Up page, when the user enters their credentials and submits:
-  localStorage.setItem("userName", name);
-  localStorage.setItem("Email", mail);
-  localStorage.setItem("Password", Key);
+# Features
 
-- On the Login page, when the user enters their credentials:
-  The app checks the saved data:
-  const LogUser = localStorage.getItem("Email");
-  const logKey = localStorage.getItem("Password");
-  If credentials match, the user is successfully logged in and redirected to the next page.
+- Sign up with name, email, and password
+- Prevents duplicate email registrations
+- Login functionality with redirect on success
+- Data stored using browser's local storage
+- No backend or database required
+- Multiple HTML pages for login, signup, and welcome
 
-3. Key Features
-Input validation for email and password
-Real-time checks for valid domains (gmail.com, yahoo.com, outlook.com)
-Uses localStorage to store and retrieve user data
-Alerts the user if credentials do not match
+---
 
-4. How to Run Locally
-Clone or download this repository.
-Open the Sign.html file in your browser.
-Create a new account.
-Log in with the same credentials.
+# How It Works
 
-5. Future Improvements
-Connect to a real backend and database
-Implement stronger password hashing
-Add a forgot password feature
-Enhance UI with modern design libraries
+1. The user signs up through the signup page.
+2. If the email is already stored, a message appears saying it already exists.
+3. On successful signup, the data is saved in local storage.
+4. The user logs in using the login page.
+5. If credentials match, the user is redirected to the welcome page.
+
+---
+
+# Project Folder Structure
+
+LoginDesign/
+├── index.html
+├── README.md
+├── package.json
+├── assets/
+│   ├── G.jpg
+│   ├── G2.jpg
+│   ├── G3.jpg
+│   ├── G4.jpg
+│   └── image.png
+├── HtmlFiles/
+│   ├── Hello.html
+│   ├── LoggedFile.html
+│   ├── Log.css
+│   ├── Sign.html
+│   └── Sign.css
+├── JavascriptFile/
+│   ├── userInterface.js
+│   ├── ValidationLog.js
+│   └── ValidationSing.js
